@@ -33,7 +33,7 @@
 
   <section class="hero">
     <div class="hero-text reveal">
-    <p class="eyebrow">Social Media Marketing Manager</p>
+    <p class="eyebrow">Strategy &bull; Creation &bull; Management</p>
     <h1>Social media management for brands that want to grow.</h1>
     <p class="sub">I plan, create, and run social accounts so you can focus on your business.</p>
     <a href="#contact" class="btn btn-dark">Work With Me</a>
@@ -113,10 +113,10 @@
 
   <footer>
     <a href="#" class="logo footer-logo"><img src="logo-light.png" alt="Better than Great" width="700" height="385" loading="lazy"></a>
-    <p>&copy; <span id="year"></span> Better than Great</p>
+    <p>&copy; <span class="year">2026</span> Better than Great</p>
   </footer>
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.year').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
     const reveals = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
