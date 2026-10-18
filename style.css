@@ -1,0 +1,69 @@
+:root {
+  --cream: #fffff1;
+  --olive: #a09770;
+  --tan: #decdb1;
+  --brown: #7d5c33;
+  --dark: #5a4125;
+  --ink: #313234;
+  --display: 'Archivo', sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+h1, h2, h3, .tab, .services span { font-stretch: 125%; }
+body { font-family: 'Inter', Arial, sans-serif; background: var(--cream); color: var(--ink); line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+
+/* Top bar */
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 24px 5%; border-bottom: 1px solid var(--ink); font-size: .9rem; letter-spacing: .04em; }
+.topbar nav { display: flex; gap: 28px; text-transform: uppercase; }
+.topbar nav a:hover { color: var(--brown); }
+
+/* Hero */
+.hero { padding: 100px 5% 110px; max-width: 1100px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; color: var(--brown); margin-bottom: 20px; }
+.hero h1 { font-family: var(--display); font-weight: 300; font-size: clamp(2rem, 5.5vw, 3.6rem); line-height: 1.15; letter-spacing: -.01em; margin-bottom: 20px; max-width: 900px; }
+.sub { font-size: 1.1rem; max-width: 520px; color: #5b5b5b; }
+
+/* Panels with folder tabs */
+.panel { position: relative; padding: 110px 5% 90px; color: var(--cream); }
+.olive { background: var(--olive); }
+.tan { background: var(--tan); color: var(--ink); }
+.brown { background: var(--brown); }
+.tab { position: absolute; top: -46px; left: 5%; height: 46px; padding: 12px 70px 0 26px; font-family: var(--display); font-weight: 300; text-transform: uppercase; font-size: .95rem; letter-spacing: .02em; clip-path: polygon(0 0, calc(100% - 46px) 0, 100% 100%, 0 100%); border-radius: 14px 0 0 0; }
+.tab .arrow { margin-left: 18px; font-family: Inter, sans-serif; }
+.tab-olive { background: var(--olive); color: var(--cream); left: 20%; }
+.tab-tan { background: var(--tan); color: var(--cream); left: 12%; }
+.tab-brown { background: var(--brown); color: var(--cream); }
+
+/* Accounts */
+.accounts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 48px; max-width: 1200px; margin: 0 auto; }
+.account { display: flex; gap: 20px; align-items: center; }
+.info h3 { font-family: var(--display); font-weight: 700; font-size: 1.05rem; margin-bottom: 2px; word-break: break-word; }
+.dates { font-weight: 600; font-size: .85rem; margin-bottom: 10px; }
+.info p:not(.dates) { font-size: .95rem; margin-bottom: 6px; }
+.phone { flex: 0 0 130px; aspect-ratio: 9 / 18.5; background: #111; border-radius: 22px; padding: 6px; box-shadow: 0 12px 30px rgba(0,0,0,.25); order: 2; }
+.phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; display: block; }
+
+/* Services */
+.services { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; }
+.services span { font-family: var(--display); font-size: .85rem; color: var(--brown); }
+.services h3 { font-family: var(--display); font-weight: 400; font-size: 1.15rem; margin: 6px 0; }
+.services p { color: #55503f; }
+
+/* Contact */
+.contact { text-align: center; padding-top: 120px; padding-bottom: 110px; }
+.contact h2 { font-family: var(--display); font-weight: 300; font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 14px; }
+.contact p { max-width: 460px; margin: 0 auto 32px; opacity: .9; }
+.btn { display: inline-block; padding: 14px 42px; border-radius: 999px; background: var(--cream); color: var(--brown); font-weight: 600; letter-spacing: .03em; transition: background .2s; }
+.btn:hover { background: var(--tan); }
+.contact .email { margin: 20px auto 0; font-size: .95rem; }
+
+footer { background: var(--dark); color: var(--tan); text-align: center; padding: 28px; font-size: .85rem; }
+
+@media (max-width: 600px) {
+  .topbar nav { gap: 16px; font-size: .8rem; }
+  .tab, .tab-olive, .tab-tan { left: 16px; font-size: .8rem; padding-right: 60px; }
+  .phone { flex-basis: 110px; }
+}
+
+.placeholder { width: 100%; height: 100%; border-radius: 16px; background: var(--tan); color: var(--brown); display: flex; align-items: center; justify-content: center; font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; }
